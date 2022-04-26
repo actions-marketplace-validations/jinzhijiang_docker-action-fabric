@@ -17,5 +17,6 @@ jobs:
           user: ${{ secrets.SSH_USR }}
           run: |
             local('pwd')
+            local('ls')
       - name: 获取结果
         run: echo "Result = ${{ steps.hello.outputs.result }}"
