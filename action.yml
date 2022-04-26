@@ -3,7 +3,10 @@ description: 'Github Action 配置SSH 通过 Fabric自动部署到服务器运�
 inputs:
   rsakey:
     description: 'RSA私钥'
-    required: true
+    required: false
+  password:
+    description: 'SSH密码'
+    required: false
   port:
     description: '远程服务器ssh连接端口号'
     required: true
@@ -28,3 +31,4 @@ runs:
     - ${{ inputs.ip }}
     - ${{ inputs.port }}
     - ${{ inputs.run }}
+    - ${{ inputs.password }}
