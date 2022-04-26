@@ -2,7 +2,7 @@
 
 cd $GITHUB_WORKSPACE
 mv /action_fabfile_creator.py .
-if [ ! $1 ]; then
+if [ $1 ]; then
 	echo "配置的SSH RSA"
 	mkdir ~/.ssh
 	chmod 700 ~/.ssh
