@@ -1,0 +1,30 @@
+name: 'SSH RUN SHELL'
+description: '配置好ssh私钥后，可执行远程命令'
+inputs:
+  rsakey:
+    description: 'RSA私钥'
+    required: true
+  port:
+    description: '远程服务器ssh连接端口号'
+    required: true
+    default: 22
+  ip:
+    description: '远程服务器ip地址'
+    required: true
+  user:
+    description: '登录远程服务器的用户'
+    required: true
+    default: 'root'
+  run:
+    description: '在配置有本地SSH的docker环境执行的命令'
+    required: true
+    default: 'pwd'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.rsakey }}
+    - ${{ inputs.user }}
+    - ${{ inputs.ip }}
+    - ${{ inputs.port }}
+    - ${{ inputs.run }}
