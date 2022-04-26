@@ -3,6 +3,7 @@
 
 import sys
 import getopt
+from functools import reduce
 
 user = None
 ip = None
@@ -42,6 +43,8 @@ with open('action_fabfile.py', 'w') as af:
 	ucode = "env.sudo_user = 'root'" if user == "root" else ("env.user = '%s'" % user)
 
 	pcode = ('env.password = "%s"' % password) if key_filepath is None else ("env.key_filename = '%s'" % key_filepath)
+
+    pycode = reduce(lambda a, b: a.strip() + "\n\t" + b.strip(), code.strip().split("\n"))
 
 	af.write('''#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
