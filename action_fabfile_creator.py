@@ -3,7 +3,6 @@
 
 import sys
 import getopt
-from functools import reduce
 
 user = None
 ip = None
@@ -44,7 +43,9 @@ with open('action_fabfile.py', 'w') as af:
 
 	pcode = ('env.password = "%s"' % password) if key_filepath is None else ("env.key_filename = '%s'" % key_filepath)
 
-    pycode = reduce(lambda a, b: "%s\n\t%s" % (a.strip(), b.strip()), code.strip().split("\n"))
+    pycode = ""
+    for line in code.strip().split("\n"):
+        pycode += line.strip() + "\n\t"
 
 	af.write('''#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
