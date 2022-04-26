@@ -8,7 +8,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: 测试步骤一
-        uses: ./
+        uses: jinzhijiang/docker-action-fabric@v1.0.0
         id: hello
         with:
           rsakey: ${{ secrets.SSH_RSA }}

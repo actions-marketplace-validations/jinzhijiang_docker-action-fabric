@@ -1,5 +1,5 @@
-name: 'SSH RUN SHELL'
-description: '配置好ssh私钥后，可执行远程命令'
+name: 'Action Fabric Deploy'
+description: 'Github Action 配置SSH 通过 Fabric自动部署到服务器运行'
 inputs:
   rsakey:
     description: 'RSA私钥'
