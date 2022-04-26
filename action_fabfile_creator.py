@@ -44,6 +44,12 @@ with open('action_fabfile.py', 'w') as af:
 
 	pcode = ('env.password = "%s"' % password) if key_filepath is None else ("env.key_filename = '%s'" % key_filepath)
 
+    s = """
+            local('pwd')
+            local('ls')
+    """
+    print(reduce(lambda a, b: a.strip() + "\n\t" + b.strip(), s.strip().split("\n")))
+
     pycode = reduce(lambda a, b: a.strip() + "\n\t" + b.strip(), code.strip().split("\n"))
 
 	af.write('''#!/usr/bin/env python3
