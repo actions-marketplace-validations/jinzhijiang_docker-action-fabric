@@ -5,6 +5,7 @@ Docker action配合fabric，自动部署网页，后台程序等到服务器
 ## 输入
 
 |字段|是否必传|值描述|
+|:-|-|:-|
 |`rsakey`|和`password`互斥必传|SSH秘钥连接方式，传入私钥字符串|
 |`password`|和`rsakey`互斥必传|SSH密码连接方式，传入登录密码|
 |`port`|必传|SSH连接端口号|
@@ -34,3 +35,6 @@ with:
     put('README.md', "/home/README2.md")
     run('pwd')
 ```
+
+# Apache 2.0 License
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
