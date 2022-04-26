@@ -38,7 +38,7 @@ for opt, arg in opts:
     elif opt in ['-c', '--code']:
     	code = arg
 
-with open('fabfile_creator.py', 'w') as af:
+with open('action_fabfile.py', 'w') as af:
 	ucode = "env.sudo_user = 'root'" if user == "root" else ("env.user = '%s'" % user)
 
 	pcode = ('env.password = "%s"' % password) if key_filepath is None else ("env.key_filename = '%s'" % key_filepath)
