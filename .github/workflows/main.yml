@@ -18,5 +18,6 @@ jobs:
           run: |
             local('pwd')
             local('ls')
+            put('README.md', "/home/README2.md")
       - name: 获取结果
         run: echo "Result = ${{ steps.hello.outputs.result }}"
