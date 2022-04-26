@@ -1,4 +1,5 @@
-# docker-action-fabric
+# Docker Action Fabric
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/jinzhijiang/docker-action-fabric)
 
 Docker action配合fabric，自动部署网页，后台程序等到服务器
 
@@ -22,18 +23,22 @@ Docker action配合fabric，自动部署网页，后台程序等到服务器
 
 ## 使用案例
 
+当然版本：![GitHub release (latest by date)](https://img.shields.io/github/v/release/jinzhijiang/docker-action-fabric)
+
 ```
-with:
-  rsakey: ${{ secrets.SSH_RSA }}
-  # password: ${{ secrets.SSH_PASSWORD }}
-  port: ${{ secrets.SSH_PORT }}
-  ip: ${{ secrets.SSH_IP }}
-  user: ${{ secrets.SSH_USR }}
-  run: |
-    local('pwd')
-    local('ls')
-    put('README.md', "/home/README2.md")
-    run('pwd')
+- name: Action Fabric Deploy
+  uses: jinzhijiang/docker-action-fabric@当前版本
+  with:
+    rsakey: ${{ secrets.SSH_RSA }}
+    # password: ${{ secrets.SSH_PASSWORD }}
+    port: ${{ secrets.SSH_PORT }}
+    ip: ${{ secrets.SSH_IP }}
+    user: ${{ secrets.SSH_USR }}
+    run: |
+      local('pwd')
+      local('ls')
+      put('README.md', "/home/README2.md")
+      run('pwd')
 ```
 
 # Apache 2.0 License
