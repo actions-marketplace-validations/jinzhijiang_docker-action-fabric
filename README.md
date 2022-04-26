@@ -23,7 +23,7 @@ Docker action配合fabric，自动部署网页，后台程序等到服务器
 
 ## 使用案例
 
-当然版本：![GitHub release (latest by date)](https://img.shields.io/github/v/release/jinzhijiang/docker-action-fabric)
+当前版本：![GitHub release (latest by date)](https://img.shields.io/github/v/release/jinzhijiang/docker-action-fabric)
 
 ```
 - name: Action Fabric Deploy
