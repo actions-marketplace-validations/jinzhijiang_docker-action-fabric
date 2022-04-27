@@ -1,7 +1,7 @@
-# Docker Action Fabric
+# Fabric Github Action
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/jinzhijiang/docker-action-fabric)
 
-Docker action配合fabric，自动部署网页，后台程序等到服务器
+Gihub Action + Fabric，自动部署网页，后台程序等到服务器
 
 ## 输入
 

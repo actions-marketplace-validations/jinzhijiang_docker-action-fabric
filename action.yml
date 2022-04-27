@@ -1,4 +1,4 @@
-name: 'Action Fabric Deploy'
+name: 'Fabric Github Action Deploy'
 description: 'Github Action 配置SSH 通过 Fabric自动部署到服务器运行'
 inputs:
   rsakey:
